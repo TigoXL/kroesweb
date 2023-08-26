@@ -1,0 +1,386 @@
+@font-face {
+  font-family: "Raleway";
+  src: url('./Fonts/Raleway-Regular.ttf');
+  /* src: url('fonts/fira/eot/FiraSans-Regular.eot') format('embedded-opentype'),
+       url('fonts/fira/woff2/FiraSans-Regular.woff2') format('woff2'),
+       url('fonts/fira/woff/FiraSans-Regular.woff') format('woff'),
+       url('fonts/fira/woff2/FiraSans-Regular.ttf') format('truetype'); */
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", "PT Sans", Calibri, Tahoma, sans-serif;
+  background-color: #003060;
+  color: #3d3d3d;
+}
+p {
+  margin: 0;
+}
+
+/* B A C K G R O U N D */
+
+div.background {
+  position: absolute;
+  background-color: #003060;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  z-index: -100;
+}
+div.imgbackground {
+  width: 60vw;
+  height: min-content;
+  margin: auto;
+  margin-top: 21vh;
+}
+img.background {
+  object-fit: contain;
+  aspect-ratio: 866 / 399;
+  width: 100%;
+}
+div.blurbackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(00, 30, 60, 0.5);
+  backdrop-filter: blur(30px);
+  top: 0;
+  left: 0;
+}
+
+/* T O P     B A R */
+
+  /* L O G O */
+
+  div.topbar {
+    background-color: rgb(00, 255, 00, 0.0);
+  
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0vw 1.39vw;
+  }
+  div.topbar_logo{
+    height: 60%;
+    aspect-ratio: 866 / 399;
+    background: url(./Images/Logos/KWOutlineGradient.png) no-repeat;
+    background-size: contain;
+  }
+  button.topbar_logo {
+    background: url(./Images/Logos/KWGradient.png) no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    opacity: 0%;
+  }
+  button.topbar_logo:hover {
+    opacity: 100%;
+    cursor: pointer;
+  }
+
+  /* B U T T O N S */
+
+  div.topbar_links {
+    height: 60%;
+    width: 20vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+  div.topbar_linksbutton {
+    width: 3vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  button.topbar_links {
+    height: 100%;
+    width: 20%;
+    background-color: rgb(00, 00, 10, 0.0);
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+  }
+  div.topbar_linksunderline {
+    width: 3vw;
+    height: 3px;
+    background: rgb(2,0,36);
+    background: linear-gradient(45deg, rgba(40,147,214,1) 0%, rgba(119,239,143,1) 100%);
+    margin-top: 0.3vw;
+    transition: 0.3s;
+  }
+  div.topbar_linksunderline.prev {
+    opacity: 0;
+  }
+  button.topbar_links.topbar_contact {
+    background-color: #ff7e01;
+    border-color: #b35801;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    margin-left: 10%;
+    transition: 0.3s;
+  }
+  button.topbar_links.topbar_contact:hover {
+    scale: 1.2;
+  }
+  button.topbar_links.topbar_contact:active {
+    background-color: #cc6501;
+  }
+
+/* F R O N T     P A G E */
+
+div.frontpage {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+}
+div.homeview {
+  color: #fff;
+  width: 60vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+span.homeviewtitel {
+  margin-top: 25px;
+  font-size: 9rem;
+  font-weight: lighter;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 10px;
+}
+span.homeviewsubtitel {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* I N F O R M A T I O N M E N U */
+
+div.informationmenu {
+  background-color: #fff;
+  height: auto;
+}
+h1.infmenu {
+  font-size: 2.25rem;
+  line-height: 150%;
+  font-family: "Montserrat", "PT Sans", sans-serif;
+}
+span.infmenu {
+  font-size: 1.5rem;
+  line-height: 120%;
+}
+/* W A T     I K     D O E */
+  div.informationmenu_watikdoe {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+    /* T E K S T */
+    div.infmenu_watikdoetekst {
+      height: 60%;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    div.infmenu_watikdoetekstbox {
+      width: 60%;
+      flex-direction: column;
+    }
+    h1.infmenu_watikdoetekst {
+      color: #2893d6;
+      margin: 0;
+    }
+    span.infmenu_watikdoetekst {
+      letter-spacing: 1px;
+    }
+    button.infmenu_watikdoetekst {
+      width: 250px;
+      height: 60px;
+      margin-top: 30px;
+      border-radius: 29px;
+      border-color: rgb(2,0,36);
+      border-color: linear-gradient(45deg, rgba(40,147,214,1) 0%, rgba(119,239,143,1) 100%);
+      background: rgb(00, 00, 10, 0.0);
+      border-width: 4px;
+      transform: 0.3s;
+    }
+    button.infmenu_watikdoetekst:hover {
+      background: rgb(2,0,36);
+      background: linear-gradient(45deg, rgba(40,147,214,1) 0%, rgba(119,239,143,1) 100%);
+      color: white;
+    }
+    button.infmenu_watikdoetekst::before {
+      background-color: white;
+    }
+
+    /* I M A G E */
+    div.infmenu_watikdoeimage {
+      height: 50vh;
+      width: 40%;
+      display: flex;
+      /* ALIGN COMPLIMENT */
+      align-items: end;
+      justify-content: start;
+    }
+    div.infmenu_watikdoeimageself {
+      height: 50vh;
+      aspect-ratio: 1920 / 1280;
+      position: absolute;
+      display: flex;
+      /* ALIGN IMAGE V */
+      align-items: start;
+      justify-content: end;
+    }
+    div.infmenu_watikdoeimagenodistort {
+      height: 44.8vh;
+      aspect-ratio: 1920 / 1280;
+      object-fit: cover;
+    }
+    img.infmenu_watikdoeimage {
+      height: 100%;
+      width: 100%;
+      float: none;
+      object-fit: cover;
+    }
+    div.infmenu_watikdoeimagecompliment {
+      height: 44.8vh;
+      aspect-ratio: 1920 / 1280;
+      background-color: #77ef8f;
+    }
+/* W A A R O M   J I J */
+  div.informationmenu_waaromjij {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  /* T E K S T */
+    div.infmenu_waaromjijtekst {
+      height: 60%;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    div.infmenu_waaromjijtekstbox {
+      width: 60%;
+      flex-direction: column;
+    }
+    h1.infmenu_waaromjijtekst {
+      color: #77ef8f;
+      margin: 0;
+    }
+    span.infmenu_waaromjijtekst {
+      letter-spacing: 1px;
+    }
+
+    /* I M A G E */
+    div.infmenu_waaromjijimage {
+      height: 50vh;
+      width: 50%;
+      display: flex;
+      /* ALIGN COMPLIMENT */
+      align-items: end;
+      justify-content: end;
+    }
+    div.infmenu_waaromjijimageself {
+      height: 50vh;
+      aspect-ratio: 1920 / 1280;
+      position: absolute;
+      display: flex;
+      /* ALIGN IMAGE V */
+      align-items: start;
+      justify-content: start;
+    }
+    div.infmenu_waaromjijimagenodistort {
+      height: 44.8vh;
+      aspect-ratio: 1920 / 1280;
+      object-fit: cover;
+    }
+    img.infmenu_waaromjijimage {
+      height: 100%;
+      width: 100%;
+      float: none;
+      object-fit: cover;
+    }
+    div.infmenu_waaromjijimagecompliment {
+      height: 44.8vh;
+      aspect-ratio: 1920 / 1280;
+      background-color: #2893d6;
+    }
+
+/* C O N T A C T */
+
+div.contact {
+
+  height: 45vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+h1.contactinfo {
+  color: #2893d6;
+  font-family: "Montserrat", "Open Sans", sans-serif;
+}
+span.contactinfo {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  gap: 10px;
+}
+div.contactinfo {
+  width: 80vw;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+a.contactinfo {
+  color: #fff;
+  text-decoration: none;
+}
+a.contactinfo:hover {
+  text-decoration: underline;
+}
+div.contactcopyright {
+  border-top-width: 4px;
+  border-color: rgb(20, 102, 185, 0.5);
+  border-top-style: solid;
+  width: 80vw;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+span.contactcopyright {
+  margin-left: 20px;
+  display: flex;
+  gap: 5px;
+}
+a.contactcopyright {
+  color: white;
+}
