@@ -6,6 +6,14 @@
        url('fonts/fira/woff/FiraSans-Regular.woff') format('woff'),
        url('fonts/fira/woff2/FiraSans-Regular.ttf') format('truetype'); */
 }
+@font-face {
+  font-family: "answer";
+  src: url('./Fonts/answer.regular.ttf');
+}
+@font-face {
+  font-family: "sensation-bold";
+  src: url('./Fonts/sansation.bold.ttf');
+}
 
 html {
   width: 100%;
@@ -63,11 +71,13 @@ div.blurbackground {
     background-color: rgb(00, 255, 00, 0.0);
   
     height: 10vh;
+    min-height: 75px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0vw 1.39vw;
+    margin-left: clamp(10px, 1.39vw, 30px);
+    margin-right: clamp(20px, 1.39vw, 40px);
   }
   div.topbar_logo{
     height: 60%;
@@ -93,9 +103,10 @@ div.blurbackground {
 
   div.topbar_links {
     height: 60%;
-    width: 20vw;
+    width: fit-content;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    gap: 20px;
   }
   div.topbar_linksbutton {
     width: 3vw;
@@ -107,19 +118,17 @@ div.blurbackground {
   }
   button.topbar_links {
     height: 100%;
-    width: 20%;
     background-color: rgb(00, 00, 10, 0.0);
     color: #fff;
     border: 0;
     cursor: pointer;
   }
   div.topbar_linksunderline {
-    width: 3vw;
+    width: 55px;
     height: 3px;
     background: rgb(2,0,36);
     background: linear-gradient(45deg, rgba(40,147,214,1) 0%, rgba(119,239,143,1) 100%);
     margin-top: 0.3vw;
-    transition: 0.3s;
   }
   div.topbar_linksunderline.prev {
     opacity: 0;
@@ -128,6 +137,7 @@ div.blurbackground {
     background-color: #ff7e01;
     border-color: #b35801;
     border-style: solid;
+    aspect-ratio: 3/2;
     border-width: 3px;
     border-radius: 10px;
     margin-left: 10%;
@@ -143,6 +153,7 @@ div.blurbackground {
 /* F R O N T     P A G E */
 
 div.frontpage {
+  min-height: 450px;
   height: 60vh;
   display: flex;
   justify-content: center;
@@ -157,14 +168,15 @@ div.homeview {
   gap: 40px;
 }
 span.homeviewtitel {
-  margin-top: 25px;
-  font-size: 9rem;
+  margin-top: 7.5vh;
+  font-size: clamp(4rem, 8vw, 10vw);
   font-weight: lighter;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 10px;
+  font-family: "sensation-bold", "Montserrat", sans-serif;
+  letter-spacing: 0.5vw;
 }
 span.homeviewsubtitel {
-  font-size: 24px;
+  font-size: clamp(0.8rem, 1.5vw, 2vw);
+  /* font-size: 24px; */
   font-weight: bold;
 }
 
@@ -175,12 +187,14 @@ div.informationmenu {
   height: auto;
 }
 h1.infmenu {
-  font-size: 2.25rem;
+  font-size: clamp(1.3rem, 2vw, 2.5vw);
+  /* font-size: 2.25rem; */
   line-height: 150%;
   font-family: "Montserrat", "PT Sans", sans-serif;
 }
 span.infmenu {
-  font-size: 1.5rem;
+  font-size: clamp(0.8rem, 1.3vw, 2vw);
+  /* font-size: 1.5rem; */
   line-height: 120%;
 }
 /* W A T     I K     D O E */
@@ -333,9 +347,9 @@ span.infmenu {
 
 /* C O N T A C T */
 
-div.contact {
-
+footer.contact {
   height: 45vh;
+  min-height: 200px;
   width: 100vw;
 
   display: flex;
@@ -373,6 +387,7 @@ div.contactcopyright {
   border-top-style: solid;
   width: 80vw;
   height: 10%;
+  min-height: 30px;
   display: flex;
   align-items: center;
   gap: 0px;
