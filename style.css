@@ -24,7 +24,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Raleway", "PT Sans", Calibri, Tahoma, sans-serif;
-  background-color: #003060;
+  background-color: #001E3C;
   color: #3d3d3d;
   overflow-x: hidden;
 }
@@ -36,7 +36,7 @@ p {
 
 div.background {
   position: absolute;
-  background-color: #003060;
+  background-color: #001E3C;
   width: 100vw;
   height: 100vh;
   padding: 0;
@@ -153,7 +153,8 @@ div.blurbackground {
 /* F R O N T     P A G E */
 
 div.frontpage {
-  min-height: 450px;
+  min-height: 5vw;
+  /* max-height: 3vw; */
   height: 60vh;
   display: flex;
   justify-content: center;
