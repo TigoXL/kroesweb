@@ -374,5 +374,7 @@ footer .contact {
 @media (orientation: portrait) {
   body {
     background-image: url('./Images/Logos/KGradientSquare.png');
+    background-attachment: fixed;
+    backdrop-filter: blur(20px);
   }
 }
