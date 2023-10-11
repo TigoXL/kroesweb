@@ -137,6 +137,7 @@ body {
   background-position-y: 25vh;
   background-attachment: fixed;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 
@@ -374,7 +375,5 @@ footer .contact {
 @media (orientation: portrait) {
   body {
     background-image: url('./Images/Logos/KGradientSquare.png');
-    background-attachment: fixed;
-    backdrop-filter: blur(20px);
   }
 }
